@@ -1,0 +1,139 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath}
+% define the title
+\author{John Hancock}
+\title{Udacity Intro To Statistics Problem Set 6}
+\begin{document}
+% generates the title
+\maketitle
+% insert the table of contents
+\tableofcontents
+\section{Ratio of Correlation to Regression}
+Given:
+
+\begin{equation}
+b = 
+  \frac{ \sum_{i=1}^n \left(x_i - \bar{x}\right)\left(y_i - \bar{y}\right) } 
+    { \sum_{i=1}^n \left(x_i - \bar{x} \right)^2 }
+\end{equation}
+
+and:
+
+\begin{equation}
+r = 
+  \frac{ \sum_{i=1}^n \left(x_i - \bar{x}\right)\left(y_i - \bar{y}\right) }
+   { \sqrt{\sum_{i=1}^n \left(x_i - \bar{x} \right)^2 
+      \sum_{i=1}^n \left(y_i - \bar{y} \right)^2 } }
+\end{equation}
+
+find a simplified form for $\frac{b}{r}$
+
+let $f\left( x \right ) = $
+
+\begin{equation}
+  \sum_{i=1}^n \left(x_i - \bar{x}\right)\left(y_i - \bar{y}\right) 
+\end{equation}
+
+then $\frac{b}{r} = $
+
+\begin{equation}
+  \frac{ 
+    \frac { f \left(x\right) } { \sum_{i=1}^n \left(x_i - \bar{x} \right)^2 }
+    }
+    {\frac 
+      { f \left(x\right) }
+      {
+        \sqrt{\sum_{i=1}^n \left(x_i - \bar{x} \right)^2 
+        \sum_{i=1}^n \left(y_i - \bar{y} \right)^2 } 
+      }
+    }
+\end{equation}
+
+
+\begin{equation}
+\implies
+\frac{b}{r} = 
+  \frac { f \left(x\right) } { \sum_{i=1}^n \left(x_i - \bar{x} \right)^2 }
+  \frac  {
+        \sqrt{\sum_{i=1}^n \left(x_i - \bar{x} \right)^2 
+        \sum_{i=1}^n \left(y_i - \bar{y} \right)^2 } 
+      }
+      { f \left(x\right) }
+\end{equation}
+
+\begin{equation}
+\implies
+\frac{b}{r} = 
+  \frac
+    {
+      \sqrt{\sum_{i=1}^n \left(x_i - \bar{x} \right)^2 
+      \sum_{i=1}^n \left(y_i - \bar{y} \right)^2 } 
+    }
+    {
+      \sum_{i=1}^n \left(x_i - \bar{x} \right)^2 
+    }
+\end{equation}
+
+
+\begin{equation}
+\implies
+\frac{b}{r} = 
+  \frac
+    {
+      \sqrt{\sum_{i=1}^n \left(x_i - \bar{x} \right)^2}
+      \sqrt{\sum_{i=1}^n \left(y_i - \bar{y} \right)^2 } 
+    }
+    {
+      \sum_{i=1}^n \left(x_i - \bar{x} \right)^2 
+    }
+\end{equation}
+
+\begin{equation}
+\implies
+\frac{b}{r} = 
+  \frac
+    {
+      (\sum_{i=1}^n \left(x_i - \bar{x} \right)^2)^\frac{1}{2}
+      \sqrt{\sum_{i=1}^n \left(y_i - \bar{y} \right)^2 } 
+    }
+    {
+      \sum_{i=1}^n \left(x_i - \bar{x} \right)^2 
+    }
+\end{equation}
+
+\begin{equation}
+\implies
+\frac{b}{r} = 
+\left( \sum_{i=1}^n \left(x_i - \bar{x} \right)^2 \right) ^ \frac{1}{2}
+\left( \sum_{i=1}^n \left(x_i - \bar{x} \right)^2 \right) ^ {-1}
+\sqrt{\sum_{i=1}^n \left(y_i - \bar{y} \right)^2 }
+\end{equation}
+
+\begin{equation}
+\implies
+\frac{b}{r} = 
+\left( \sum_{i=1}^n \left(x_i - \bar{x} \right)^2 \right) ^ {-\frac{1}{2}}
+\sqrt{\sum_{i=1}^n \left(y_i - \bar{y} \right)^2 }
+\end{equation}
+
+
+\begin{equation}
+\implies
+\frac{b}{r} = 
+\frac
+{\sqrt{\sum_{i=1}^n \left(y_i - \bar{y} \right)^2 }}
+{\sqrt{\left( \sum_{i=1}^n \left(x_i - \bar{x} \right)^2 \right)} }
+\end{equation}
+
+
+\begin{equation}
+\implies
+\frac{b}{r} = 
+\sqrt{
+  \frac
+    {\sum_{i=1}^n \left(y_i - \bar{y} \right)^2}
+    {\sum_{i=1}^n \left(x_i - \bar{x} \right)^2}
+  }
+\end{equation}
+
+\end{document}
