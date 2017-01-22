@@ -1,0 +1,74 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath}
+% define the title
+\author{John Hancock}
+\title{Udacity Intro To Statistics Problem Set 5}
+\begin{document}
+% generates the title
+\maketitle
+% insert the table of contents
+\tableofcontents
+\section{Sample Size for Given Margin of Error}
+What sample size is needed to make the margin of error 5\%?
+To calculate the sample size, we set the formula for computing the
+plus/minus amount for the margin of error to the desired margin of
+error:
+\begin{equation}
+0.05 = 1.96 \sqrt{\frac{0.55 \times 0.45}{n}}
+\end{equation}
+and solve for $n$
+
+\begin{equation}
+\frac{0.05}{1.96} =  \sqrt{\frac{0.55 \times 0.45}{n}}
+\end{equation}
+
+\begin{equation}
+\implies \left (\frac{0.05}{1.96} \right)^2 =  \frac{0.55 \times 0.45}{n}
+\end{equation}
+
+\begin{equation}
+\implies \frac{\left (\frac{0.05}{1.96} \right)^2} {0.55 \times 0.45}
+=\frac{1}{n}
+\end{equation}
+
+\begin{equation}
+\implies \left (\frac{0.05}{1.96} \right)^2 \times 0.55 \times 0.45
+=n
+\end{equation}
+\label{preFormula}
+
+\begin{equation}
+\implies n \approx 381
+\end{equation}
+
+
+\section{Sensitivity}
+Solve for $n$ with different values for $p$:
+First we solve for $n$ with $p=0.5$:
+We can use \eqref{preFormula} as a starting point.  We substitute 0.5
+for 0.55 and 0.45:
+
+\begin{equation}
+ \left (\frac{0.05}{1.96} \right)^2 \times 0.5 \times 0.5
+=n
+\end{equation}
+
+
+\begin{equation}
+\implies n \approx 385
+\end{equation}
+
+
+For $p=0.6$ We substitute 0.6 for 0.55, and 0.4 0.45:
+
+\begin{equation}
+ \left (\frac{0.05}{1.96} \right)^2 \times 0.6 \times 0.4
+=n
+\end{equation}
+
+
+\begin{equation}
+\implies n \approx 369
+\end{equation}
+
+\end{document}
